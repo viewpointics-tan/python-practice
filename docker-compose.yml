@@ -1,0 +1,9 @@
+services:
+  python:
+    environment:  
+      - PYTHONPATH=/usr/local/lib/python3.11/site-packages
+    image: python-image
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
