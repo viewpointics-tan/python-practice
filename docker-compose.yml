@@ -1,7 +1,21 @@
 services:
-  python:
+  python-run:
+    entrypoint:
+      - pipenv
+      - run
+      - python
+      - main.py
     environment:  
-      - PYTHONPATH=/usr/local/lib/python3.11/site-packages
+      - PYTHONPATH
+    image: python-image
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+  python-dev:
+    entrypoint: bash
+    environment:  
+      - PYTHONPATH
     image: python-image
     volumes:
       - type: bind
