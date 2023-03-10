@@ -1,5 +1,9 @@
 from langchain import OpenAI, LLMChain, PromptTemplate
-import openai_api_key
+from api_key import OPENAI
+import os
+
+# Set your OpenAI API key
+os.environ["OPENAI_API_KEY"] = OPENAI
 
 template = """
 Human: {human_input}
