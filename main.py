@@ -10,14 +10,14 @@ Human: {human_input}
 Assistant:"""
 
 prompt = PromptTemplate(
-    input_variables=["human_input"], 
+    input_variables=["human_input"],
     template=template
 )
 
 chatgpt_chain = LLMChain(
-    llm=OpenAI(temperature=0.7), 
-    prompt=prompt, 
-    verbose=True, 
+    llm=OpenAI(temperature=0.7),
+    prompt=prompt,
+    verbose=True,
     # memory=ConversationBufferWindowMemory(k=2),
 )
 
