@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-langchain = "*"
-openai = "*"
+langchain = "~=0.0"
+openai = "~=0.27"
 
 [dev-packages]
 
